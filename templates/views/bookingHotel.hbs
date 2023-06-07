@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/hotelbook.css">
+</head>
+<body>
+    {{>navbar}}
+    <section class="hotel-info">
+        <div class="hotel-info-cont">
+            <h1 id="name">Hello</h1>
+            <p id="property_location"></p>
+            <div id="prop_image_cont" class="prop_image_cont">
+                <div class="property_images"></div>
+                <div class="property_images"></div>
+                <div class="property_images"></div>
+                <div class="property_images"></div>
+            </div>      
+        </div>
+        <div class="hotel-info-cont">
+            <div class="new_info_div">
+                <div class="new">
+                    <h2 id="property_owner_name"></h2>
+                    <div id="prop_room_details" class="prop_room_details">
+                        <span id="guest_allowed"></span>
+                        <span>:</span>
+                        <span id="bedrooms"></span>
+                        <span>:</span>
+                        <span id="bed">ss</span>
+                    </div>
+                </div>
+                <div class="property_owner_image"></div>
+            </div>
+            <h2>What this place offers</h2>
+            <div id="amenities" class="amenities">
+                <div class="amenities_available">
+                    <span class="material-symbols-outlined">
+                    local_parking
+                    </span>
+                    <span class="answer">Yes</span>
+                </div>
+                <div class="amenities_available">
+                    <span class="material-symbols-outlined">
+                        wifi
+                    </span>
+                    <span class="answer">Yes</span>
+                </div>
+                <div class="amenities_available">
+                    <span class="material-symbols-outlined">
+                        restaurant
+                    </span>
+                    <span class="answer">Yes</span>
+                </div>
+                <div class="amenities_available">
+                    <span class="material-symbols-outlined">
+                        ac_unit
+                    </span>
+                    <span class="answer">Yes</span>
+                </div>
+                <div class="amenities_available">
+                    <span class="material-symbols-outlined">
+                        dry_cleaning
+                    </span>
+                    <span class="answer">Yes</span>
+                </div>
+                <div class="amenities_available">
+                    <span class="material-symbols-outlined">
+                        kitchen
+                    </span>
+                    <span class="answer">Yes</span>
+                </div>
+                <div class="amenities_available">
+                    <span class="material-symbols-outlined">
+                        soup_kitchen
+                    </span>
+                    <span class="answer">Yes</span>
+                </div>
+                <div class="amenities_available">
+                    <span class="material-symbols-outlined">
+                        pets
+                    </span>
+                    <span class="answer">Yes</span>
+                </div>
+                <div class="amenities_available">
+                    <span class="material-symbols-outlined">
+                        detector_smoke
+                    </span>
+                    <span class="answer">Yes</span>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <h2>During your stay!</h2>
+                <p id="information">The host family is always available to guide the guests. guest satisfaction is top of my payoraty
+                all rooms lake view my home set on bank of lake pichola. beautiful view from the room.all mazar sightseeing just walking distance.</p>
+            </div>
+
+            <form class="booking_div" action="/hotelBooking" method="post">
+                <h1>₹ <span id="night_price">night</span></h1>
+                <div class="first_cont">
+                    <div class="check_in_check_out">
+                        <div class="check_in">
+                            <label>check-in</label>
+                            <input type="date" name="check_in_date" id="check_in_date" required>
+                        </div>
+                        <div class="check_out">
+                            <label>check-out</label>
+                            <input type="date" name="check_out_date" id="check_out_date" required>
+                        </div>
+                    </div>
+                    <div class="guest_count">
+                        <label for="">nights</label>
+                        <input type="number" name="rooms_count" id="nights" placeholder="Number of nights">  
+                    </div>
+                </div>
+                <h3>pricing details</h3>
+                <div class="second_cont">
+                    <div class="pricing_details">
+                        <p>Total price in ₹</p>
+                        <span>:</span>
+                        <input type="text" name="total_price" id="live_price" value="0">
+                    </div>
+                    <select name="payment_mode" id="" required>
+                        <option value="null" disabled selected>select an option</option>
+                        <option value="online">online</option>
+                        <option value="offline">offline</option>
+                    </select>
+                    <div class="prop_id_maintainer hide_it">
+                        <input type="text" name="prop_id" id="prop_id_m" value="0">
+                    </div>
+                </div>
+                <button type="submit">reserve</button>
+                <p>you won't be charged</p>
+            </form>
+        </div>
+        <div class="hotel-info-cont my-box">
+            <div class="review_info">
+                <span id="review_star">
+                    <span class="material-symbols-outlined">
+                        star
+                    </span>
+                </span>
+                <span id="rating_number">3</span>
+                <span>.</span>
+                <span id="total_ratings">18 reviews</span>
+            </div>
+        </div>
+    </section>
+    {{>footer}}
+
+    <script src="./script/hotelbooking.js"></script>
+    {{!-- <script src="./script/script.js"></script> --}}
+</body>
+</html>

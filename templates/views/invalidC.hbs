@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/invalid.css">
+</head>
+<body>
+
+    {{>navbar}}
+    <section class="invalid-wrapper">
+        <div class="info-wrapper">
+            <h1><span>Hello</span> user!</h1>
+            <h2>Opps!! your credentials were incorrect.</h2>
+            <p><a href="/login">Login</a> again to continue.</p>
+        </div>
+        <div class="image-wrapper">
+            <img src="https://img.freepik.com/premium-vector/login-access-denied-vector-illustration-system-refuses-password-error-entry-computer-device-showing-user-does-have-permission-website-mobile-development_2175-1277.jpg?w=900" alt="invalid cred">
+        </div>
+    </section>
+
+    {{>footer}}
+    
+    <script>
+        const list = document.querySelector(".list");
+        const option_btn = document.getElementById("options");
+        option_btn.addEventListener("click", ()=>{
+            list.classList.toggle("list--show");
+});
+    </script>
+</body>
+</html>
+
+

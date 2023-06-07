@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <section class="addToFavBox">
+        <form action="/myFavourites" method="post" class="wrapper_box">
+            <h2>Your title</h2>
+            <div class="main_section">
+                <input type="text" name="title" id="title" placeholder="Title name..." required autocomplete="off">
+                <p>50 characters maximum</p>
+            </div>
+            <div class="fav_btn_box">
+                <button type="submit" class="create">Create</button>
+            </div>
+            <input type="text" class="hidden_content" value="" name="prop_id">
+            <span class="material-symbols-outlined cross">
+                close
+            </span>
+        </form>
+    </section>
+
+    <section class="filter_tab">
+        <form class="filter_wrapper" action="/filterdProperty" method="get">
+            <header>Filters</header>
+            <div class="price_range_cont">
+                <h2>price range</h2>
+                <input type="range" name="price_range" id="price_range">
+                <div class="price--cont">
+                    <div>
+                        <p>min price</p>                       
+                        <input type="number" name="min_price" id="min_price" placeholder="Min price...">
+                    </div>
+                    <div>
+                        <p>max price</p>                       
+                        <input type="number" name="max_price" id="max_price" placeholder="Max price...">
+                    </div>
+                </div>
+
+                <div class="property--type">
+                    <h2>Select property</h2>
+                    <div class="prop_types">
+                        <div>
+                            <input type="checkbox" name="house" id="house"  class="checkbox_inputs">
+                            <span>house</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="flat" id="flat" class="checkbox_inputs">
+                            <span>flat</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="resort" id="resort"  class="checkbox_inputs">
+                            <span>resort</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="hotel" id="hotel"  class="checkbox_inputs">
+                            <span>hotel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="location_fil">
+                    <p>location</p>
+                    <input type="search" name="location" id="location_fil" value="" placeholder="Location...">
+                </div>
+            </div>
+            <footer class="foot_div">
+                <button type="reset" id="reset">Clear all</button>
+                <button type="button" id="apply">Apply</button>
+            </footer>
+            {{!-- //closing span --}}
+            <span class="material-symbols-outlined close-filter">
+                close
+            </span>
+        </form>
+    </section>
+
+    {{>navbar}}
+    <section class="properties"></section>
+
+    {{>footer}}
+
+    <section class="search_box_wrapper">
+        <div class="result-box">
+            <span class="material-symbols-outlined close-filter" id="abcde">
+                close
+            </span>
+            <h1>Opps!!</h1>
+            <h3>Results not found!!</h3>
+        </div>
+    </section>
+    
+    <script src="script/script.js"></script>
+</body>
+</html>
+
+

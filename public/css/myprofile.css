@@ -1,0 +1,796 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400&family=Noto+Sans+Mono&display=swap');
+ 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Noto Sans Mono', monospace;
+    font-family: 'Bitter', serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*............................................. HEADER NAV BAR............................................. */
+header{
+    width: 100%;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: fit-content;
+}
+
+header nav{
+    width: 100%;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 4rem;
+    height: 7rem;
+    box-shadow: 0px 0px 5px 2px rgba(228, 227, 227, 0.849);
+}
+
+header nav .nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+header nav .nav-menu:nth-child(1){
+    gap: 0rem;
+
+}
+
+header nav .nav-menu:nth-child(2){
+    padding: 2rem;
+    transform: translateX(5rem);
+    display: none;
+}
+
+
+
+header nav .nav-menu a{
+    text-decoration: none;
+    font-size: 2rem;
+    transform: translateX(-0.5rem);
+    letter-spacing: 0.05rem;
+} 
+
+header nav .nav-menu a h3{
+    color: #ff385c;
+    font-size: 2rem;
+    /* font-family: 'Noto Sans Mono', monospace; */
+    pointer-events: none;
+}
+
+header nav .box{
+    width: max-content;
+    height: 2rem;
+    border-radius: 3rem;
+    padding: 1.3rem 1rem;
+    gap: 1rem;
+    box-shadow: 0px 0px 5px 5px rgba(228, 227, 227, 0.849);
+}
+
+header nav .box .search_menu{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-right: 0.4rem;
+}
+
+header nav .box .search-icon{
+    line-height: 100%;
+    padding: 0.7rem;
+    border-radius: 50%;
+    background-color: #ff385c;
+    color: white;
+    cursor: pointer;
+}
+
+header nav .nav-menu .profile_div a{
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+header nav .nav-menu .profile_div a:hover{
+    color: #ff385c;
+}
+
+header nav .nav-menu .profile_div>i{
+    font-size: 1.5rem;
+}
+
+header nav .nav-menu .user-menu{
+    padding: 2rem 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+header nav .nav-menu .list{
+    
+    position: absolute;
+    box-shadow: 0px 0px 5px 5px rgba(228, 227, 227, 0.849);
+    width: 20em;
+    z-index: 11;
+    top: 6.2rem;
+    right: 4rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    display: none;
+}
+
+header nav .nav-menu .list--show{
+    display: block;
+    user-select: none;
+}
+
+header nav .nav-menu .list .logIn-signUp{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 0.5px solid lightgray;
+    padding: 1rem 0rem;
+    gap: 1rem;
+}
+
+header nav .nav-menu .list .logIn-signUp p{
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+header nav .nav-menu .list .logIn-signUp p:hover{
+    transform: scale(1.1);
+}
+
+header nav .nav-menu .list .extra-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 0rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+header nav .nav-menu .list .extra-list a>p{
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+header nav .nav-menu .list .extra-list p:hover{
+    transform: scale(1.1);
+}
+
+.margin{
+    margin-left: 1rem;
+}
+
+.border-right{
+    border-right: 2px solid grey;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .nav-menu .profile_div{
+    font-size: 1rem;
+}
+
+/* header nav .nav-menu .user-menu>.profile_div.image_display{
+    background: red;
+    width: 3rem;
+    height: 3rem;
+    
+} */
+
+header nav .nav-menu .user-menu div:nth-child(2){
+    width: 3rem;
+    height: 3rem;
+    /* margin-left: 1rem; */
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    transform: translateX(0.5rem);
+    background-size: cover;
+    background-position: center;
+}
+
+.grey{
+    color: grey;
+}
+
+/* //SECTION:: */
+header section{
+    width: 100%;
+    border-top: none;
+    border-bottom: 3px solid rgb(236, 235, 235, 0.3);
+    /* box-shadow: 0px 2px 5px 5px rgba(228, 227, 227, 0.849); */
+    height: 5.5rem;
+    padding: 2rem 3rem;
+} 
+
+header .section--hide{
+    display: none;
+}
+
+header section .category_selection{
+    margin-top: 1rem;
+    gap: 2.5rem;
+    text-align: center;
+    z-index: -1;
+}
+
+header section .category_selection i{
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgb(84, 84, 84);
+}
+
+header section .category_selection p{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: rgb(84, 84, 84);
+}
+
+
+header section .filter i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: rgb(84, 84, 84);
+}
+
+header section .filter p{
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(84, 84, 84);
+}
+
+
+/* air information for wishlist */
+.air-information{
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: #ff385c;
+    position: absolute;
+    top: 0;
+    right: -3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+}
+
+.air-information>.no_of_info{
+    font-weight: bold;
+    font-size: 1em;
+}
+
+
+/* ............................................................MY PROFILE SECTION STARTS HERE............................................................ */
+
+
+.myprofile_cont{
+    width: 80vw;
+    height: fit-content;
+    margin: 4rem auto;
+    padding: 2.5rem 0rem;
+}
+
+.myprofile_cont .my_image{
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10rem;
+}
+
+.myprofile_cont .my_image h1{
+    font-size: 3.5rem;
+    letter-spacing: 0.7px;
+    text-transform: capitalize;
+}
+
+.myprofile_cont .my_image .my_user_image{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.myprofile_cont .update_form_and_extraInfo{
+    width: 100%;
+    padding: 2rem 0rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form{
+    width: 65%;
+    padding: 1.5rem 0rem;
+}
+
+.myprofile_cont .update_form_and_extraInfo .extra_info_by_bnb{
+    width: 30%;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form form .myprofile_inputs_cont{
+    width: 100%;
+    display: flex;
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.7);
+    background-blend-mode: lighten;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form form .myprofile_inputs_cont .myprofile_inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    gap: 0.5rem;
+    height: fit-content;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form form .myprofile_inputs_cont .myprofile_inputs.user-select-none{
+    pointer-events: none;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form form .myprofile_inputs_cont .myprofile_inputs label{
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    user-select: none;
+    color: #ff385dab;
+    font-weight: bold;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form form .myprofile_inputs_cont .myprofile_inputs input{
+    font-size: 2rem;
+    width: 100%;
+    letter-spacing: 1px;
+    font-weight: bold;
+    user-select: none;
+    color: rgba(0, 0, 0, 0.576);
+    text-align: left;
+    padding: 0.5rem 2rem;
+    border: none;
+    outline: none;
+    transition: 0.5s ease-in-out;
+    background: transparent;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form form .myprofile_inputs_cont .myprofile_inputs input.indent{
+    text-indent: 3rem;
+    color: royalblue;
+    scale: 1.1;
+    font-weight: 500;
+    background-color: #ff385d2b;
+    width: 90%;
+    border-radius: 1rem;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form form .myprofile_inputs_cont .myprofile_inputs input::placeholder{
+    color: red;
+    font-size: 1.5rem;
+}
+
+
+.myprofile_cont .update_form_and_extraInfo .update_form form .myprofile_inputs_cont .myprofile_btn{
+    width: 10%;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form form .myprofile_inputs_cont .myprofile_btn button{
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: inherit;
+    letter-spacing: 0.5px;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form form .myprofile_inputs_cont .myprofile_btn button:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form form>button{
+    width: 50%;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.801);
+    border-radius: 0.5rem;
+    background: linear-gradient(to right, rgba(79, 51, 176, 0.65), rgba(210,53,165,0.65));
+    border-radius: 1rem;
+    transition: 0.5s ease-in-out;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form form>button:hover{
+    color: #fff;
+    background: linear-gradient(to right,rgba(210,53,165,0.8), rgba(79, 51, 176, 0.8));
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 2px rgba(79, 51, 176, 0.3);
+}
+
+.myprofile_cont .update_form_and_extraInfo .extra_info_by_bnb{
+    width: 30%;
+    height: fit-content;
+    border: 2px solid lightgrey;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+}
+
+.myprofile_cont .update_form_and_extraInfo .extra_info_by_bnb .extra_infos{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 1.5px solid lightgray;
+    padding-bottom: 2.5rem;
+}
+
+.myprofile_cont .update_form_and_extraInfo .extra_info_by_bnb .extra_infos:nth-child(3){
+    border: none;
+}
+
+.myprofile_cont .update_form_and_extraInfo .extra_info_by_bnb .extra_infos span{
+    font-size: 7rem;
+    color: #ff385dd7;
+}
+
+.myprofile_cont .update_form_and_extraInfo .extra_info_by_bnb .extra_infos h2{
+    font-size: 2rem;
+    margin: 1rem 0rem;
+    text-transform: capitalize;
+    letter-spacing: 0.6px;
+    text-align: left;
+}
+
+.myprofile_cont .update_form_and_extraInfo .extra_info_by_bnb .extra_infos p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 1rem 0rem;
+    text-transform: capitalize;
+    letter-spacing: 0.6px;
+    text-align: left;
+    color: darkgrey;
+}
+
+/* deleting user */
+
+
+.myprofile_cont .update_form_and_extraInfo .update_form .delete_acc{
+    margin-top: 1rem;
+    width: 50%;
+    height: fit-content;
+    position: relative;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form .delete_acc>button{
+    border: none;
+    outline: none;
+    background: none;
+    color: royalblue;
+    letter-spacing: 0px;
+    padding: 1rem 0rem;
+    margin-left: 0rem;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form .delete_acc>button:hover{
+    border: none;
+    outline: none;
+    background: none;
+    color: royalblue;
+    letter-spacing: 0.5px;
+    text-decoration: underline;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form .delete_acc .confirm_box{
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    padding: 1.5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.945);
+    box-shadow: 0px 0px 5px 5px rgba(228, 227, 227, 0.7 );
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form .delete_acc .confirm_box.hide_me{
+    display: none;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form .delete_acc .confirm_box h2{
+    letter-spacing: 0.5px;
+    user-select: none;
+}
+
+
+.myprofile_cont .update_form_and_extraInfo .update_form .delete_acc .confirm_box .my-btns{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-content: center;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form .delete_acc .confirm_box .my-btns button:nth-child(1){
+    padding: 0.7rem 1rem;
+    background-color: rgb(213, 6, 6);
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form .delete_acc .confirm_box .my-btns button:nth-child(1):hover{
+    background-color: rgba(213, 6, 6, 0.7);
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form .delete_acc .confirm_box .my-btns button:nth-child(2){
+    padding: 0.7rem 1rem;
+    background-color: green;
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.myprofile_cont .update_form_and_extraInfo .update_form .delete_acc .confirm_box .my-btns button:nth-child(2):hover{
+    background-color: rgba(0, 128, 0, 0.76);
+}
+
+/* ..........................................................FOOTER SECTION STARTS HERE...................................................... */
+
+
+footer{
+    position: sticky;
+    bottom: 0;
+    border-top: 1.2px solid rgb(210, 208, 208);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 4rem;
+    background: #fff;
+    margin-top: auto;
+}
+
+footer .reserve_tab{
+    display: none;
+}
+
+footer .footer_contents{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer .footer_contents>p{
+    font-size: 1.5rem;
+    letter-spacing: 0.7px;
+    color: rgb(152, 152, 152);
+}
+
+footer .footer_contents .terms{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer .footer_contents .terms p{
+    font-size: 1.3rem;
+    letter-spacing: 0.7px;
+    text-transform: capitalize;
+    color: rgb(152, 152, 152);
+}
+
+footer .footer_contents h2:nth-child(1){
+    font-size: 1.5rem;
+}
+
+footer .footer_contents h2>span{
+    font-size: 2rem;
+}
+
+footer .footer_contents h2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.7px;
+}
+
+
+
+
+@media screen and (max-width: 1000px){
+
+    header nav .nav-menu:nth-child(3)>.profile_div:nth-child(1){
+        display: none;
+    }
+
+    header nav .nav-menu:nth-child(3)>.profile_div:nth-child(2){
+        display: none;
+    }
+
+    body>.properties{
+        width: 100%;
+    }
+
+    .properties .card{
+        width: 32%;
+    }
+
+    .properties .card .property-details p{
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (max-width: 750px){
+    header{
+        width: 100%;
+    }
+
+    header nav{
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    body>.properties{
+        width: 100%;
+        
+    }
+
+    .properties .card{
+        width: 45%;
+        
+    }
+
+    footer .footer_contents>.terms{
+        display: none;
+    }
+
+    footer .footer_contents h2{
+        display: none;
+    }
+
+    footer .footer_contents h2:nth-child(1){
+        display: block;
+    }
+
+    .myprofile_cont{
+        width: 90%;
+    }
+
+    .myprofile_cont .my_image{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .myprofile_cont .my_image h1{
+        font-size: 3rem;
+    }
+
+    .myprofile_cont .my_image .my_user_image{
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+    }
+    
+}
+
+
+@media screen and (max-width: 572px){
+    .myprofile_cont .update_form_and_extraInfo .extra_info_by_bnb{
+        display: none;
+    }
+
+    .myprofile_cont .update_form_and_extraInfo .update_form{
+        width: 100%;
+    }
+
+    .myprofile_cont .update_form_and_extraInfo .update_form form .myprofile_inputs_cont .myprofile_inputs input{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+@media screen and (max-width: 472px){
+    header nav{
+        padding: 0.2rem;
+        gap: 0rem;
+    }
+
+    header nav .nav-menu:nth-child(2){
+        transform: translateX(0rem);
+    }
+
+    header nav .nav-menu:nth-child(3)>.user-menu{
+        font-size: 1.2rem;
+        padding:  2rem 0.5rem;
+    }
+
+    header nav .nav-menu:nth-child(2)>span{
+        font-size: 1.2rem;
+    }
+
+    .properties .card{
+        width: 100%;
+        
+    }
+}

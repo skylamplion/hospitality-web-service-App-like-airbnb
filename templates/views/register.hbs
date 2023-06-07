@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+<body>
+    {{>navbar}}
+<section class="registration-cont">
+        <h2>Sign Up</h2>
+        <form action="/register" method="post" enctype="multipart/form-data"  class="mt-5">
+            
+            <div class="input-fields">
+                <label>Select User type</label>
+                <select class="user-info" name="user_type" id="">
+                    <option value="null" disabled selected>Selct an option</option>
+                    <option value="host">host</option>
+                    <option value="guest">guest</option>
+                </select>       
+            </div>
+            <div class="input-fields">
+                <label for="">first name</label>
+                <input class="user-info" type="text" name="firstname" id="" placeholder="First Name*">
+            </div>
+            <div class="input-fields">
+                <label for="">last name</label>
+                <input class="user-info" type="text" name="lastname" id="" placeholder="Last Name*">
+            </div>
+            <div class="input-fields">
+                <label for="">email</label>
+                <input class="user-info" type="text" name="email" id="" placeholder="abc@xyz.com*">
+            </div>
+            <div class="input-fields">
+                <label for="">male</label>
+                <input class="user-info" type="radio" name="gender" value="male" id="" checked>
+                <label for="">female</label>
+                <input class="user-info" type="radio" name="gender" value="female" id="">
+            </div>
+            <div class="input-fields">
+                <label for="">password</label>
+                <input class="user-info" type="password" name="password" id="" placeholder="Password*">
+            </div>
+            <div class="input-fields">
+                <label for="">confirm password</label>
+                <input class="user-info" type="password" name="confirm_password" id="" placeholder="Re-enter password*">
+            </div>
+            <div class="input-fields">
+                <label for="">contact</label>
+                <input class="user-info" type="number" name="contact" id="" placeholder="Your mobile no.*">
+            </div>
+            <div class="input-fields">
+                <label for="">date of birth</label>
+                <input class="user-info" type="date" name="dob" id="" placeholder="Your dob*">
+            </div>
+            <div class="input-fields">
+                <label for="">city</label>
+                <input class="user-info" type="text" name="city" id="" placeholder="Your City*">
+            </div>
+            <div class="input-fields">
+                <label for="">country</label>
+                <input class="user-info" type="text" name="country" id="" placeholder="Your country*">
+            </div>
+            <div class="input-fields">
+                <label for="">profile picture</label>
+                <input class="user-info" name="profile_picture" type="file" src="" alt="">
+            </div>
+            <div class="input-fields">
+                <button class="user-info" type="submit">Sign Up</button>
+            </div>
+        </form>
+    </section>
+    {{>footer}}
+    
+    <script src="./script/script.js"></script>
+</body>
+</html>

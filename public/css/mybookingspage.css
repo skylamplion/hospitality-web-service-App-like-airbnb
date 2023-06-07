@@ -1,0 +1,870 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400&family=Noto+Sans+Mono&display=swap');
+ 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Noto Sans Mono', monospace;
+    font-family: 'Bitter', serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/*............................................. HEADER NAV BAR............................................. */
+header{
+    width: 100%;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: fit-content;
+}
+
+header nav{
+    width: 100%;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 4rem;
+    height: 7rem;
+    box-shadow: 0px 0px 5px 2px rgba(228, 227, 227, 0.849);
+}
+
+header nav .nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+header nav .nav-menu:nth-child(1){
+    gap: 0rem;
+
+}
+
+header nav .nav-menu:nth-child(2){
+    padding: 2rem;
+    transform: translateX(5rem);
+    display: none;
+}
+
+
+
+header nav .nav-menu a{
+    text-decoration: none;
+    font-size: 2rem;
+    transform: translateX(-0.5rem);
+    letter-spacing: 0.05rem;
+} 
+
+header nav .nav-menu a h3{
+    color: #ff385c;
+    font-size: 2rem;
+    /* font-family: 'Noto Sans Mono', monospace; */
+    pointer-events: none;
+}
+
+header nav .box{
+    width: max-content;
+    height: 2rem;
+    border-radius: 3rem;
+    padding: 1.3rem 1rem;
+    gap: 1rem;
+    box-shadow: 0px 0px 5px 5px rgba(228, 227, 227, 0.849);
+}
+
+header nav .box .search_menu{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-right: 0.4rem;
+}
+
+header nav .box .search-icon{
+    line-height: 100%;
+    padding: 0.7rem;
+    border-radius: 50%;
+    background-color: #ff385c;
+    color: white;
+    cursor: pointer;
+}
+
+header nav .nav-menu .profile_div a{
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+header nav .nav-menu .profile_div a:hover{
+    color: #ff385c;
+}
+
+header nav .nav-menu .profile_div>i{
+    font-size: 1.5rem;
+}
+
+header nav .nav-menu .user-menu{
+    padding: 2rem 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+header nav .nav-menu .list{
+    
+    position: absolute;
+    box-shadow: 0px 0px 5px 5px rgba(228, 227, 227, 0.849);
+    width: 20em;
+    z-index: 11;
+    top: 6.2rem;
+    right: 4rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    display: none;
+}
+
+header nav .nav-menu .list--show{
+    display: block;
+    user-select: none;
+}
+
+header nav .nav-menu .list .logIn-signUp{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 0.5px solid lightgray;
+    padding: 1rem 0rem;
+    gap: 1rem;
+}
+
+header nav .nav-menu .list .logIn-signUp p{
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+header nav .nav-menu .list .logIn-signUp p:hover{
+    transform: scale(1.1);
+}
+
+header nav .nav-menu .list .extra-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 0rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+header nav .nav-menu .list .extra-list a>p{
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+header nav .nav-menu .list .extra-list p:hover{
+    transform: scale(1.1);
+}
+
+.margin{
+    margin-left: 1rem;
+}
+
+.border-right{
+    border-right: 2px solid grey;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .nav-menu .profile_div{
+    font-size: 1rem;
+}
+
+/* header nav .nav-menu .user-menu>.profile_div.image_display{
+    background: red;
+    width: 3rem;
+    height: 3rem;
+    
+} */
+
+header nav .nav-menu .user-menu div:nth-child(2){
+    width: 3rem;
+    height: 3rem;
+    /* margin-left: 1rem; */
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    transform: translateX(0.5rem);
+    background-size: cover;
+    background-position: center;
+}
+
+.grey{
+    color: grey;
+}
+
+/* //SECTION:: */
+header section{
+    width: 100%;
+    border-top: none;
+    border-bottom: 3px solid rgb(236, 235, 235, 0.3);
+    /* box-shadow: 0px 2px 5px 5px rgba(228, 227, 227, 0.849); */
+    height: 5.5rem;
+    padding: 2rem 3rem;
+} 
+
+header .section--hide{
+    display: none;
+}
+
+header section .category_selection{
+    margin-top: 1rem;
+    gap: 2.5rem;
+    text-align: center;
+    z-index: -1;
+}
+
+header section .category_selection i{
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgb(84, 84, 84);
+}
+
+header section .category_selection p{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: rgb(84, 84, 84);
+}
+
+
+header section .filter i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: rgb(84, 84, 84);
+}
+
+header section .filter p{
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(84, 84, 84);
+}
+
+/* air information for wishlist */
+.air-information{
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: #ff385c;
+    position: absolute;
+    top: 0;
+    right: -3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+}
+
+.air-information>.no_of_info{
+    font-weight: bold;
+    font-size: 1em;
+}
+
+
+/* ....................................................MY BOOKINGS PAGE............................................. */
+
+.my_bookings_cont{
+    width: 80vw;
+    height: fit-content;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0rem;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #fff;
+}
+
+.my_bookings_cont>h1{
+    width: 100%;
+    height: fit-content;
+    font-size: 4rem;
+    letter-spacing: 1px;
+    user-select: none;
+    color: darkslategray;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgb(214, 211, 211);
+}
+
+.my_bookings_cont .no_booking_cont{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem 0rem;
+
+}
+
+.my_bookings_cont .no_booking_cont h2{
+    font-size: 2em;
+    font-weight: 500;
+    color: darkslategrey;
+    letter-spacing: 1px;
+}
+
+.my_bookings_cont .no_booking_cont>p{
+    font-size: 1.6rem;
+    color: darkgray;
+    letter-spacing: 1px;
+}
+
+.my_bookings_cont .no_booking_cont .btn_to_dashboard{
+    border: 2px solid darkgrey;
+    padding: 0.7em 1.2em;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+}
+
+.my_bookings_cont .no_booking_cont .btn_to_dashboard a{
+    text-decoration: none;
+    color: darkgray;
+}
+
+.my_bookings_cont .no_booking_cont .btn_to_dashboard:hover{
+    box-shadow: 0px 0px 5px 5px rgba(228, 227, 227, 0.849);
+    border: none;
+    cursor: pointer;
+}
+
+.my_bookings_cont .no_booking_cont .btn_to_dashboard:hover a{
+    color: black;
+}
+
+.my_bookings_cont .no_booking_cont .road_to_help{
+    border-top: 2px solid rgb(214, 211, 211);
+    width: 100%;
+    line-height: 2rem;
+    padding-top: 1rem;
+}
+
+.my_bookings_cont .no_booking_cont .road_to_help p{
+    font-size: 1.2rem;
+    color: darkgray;
+    letter-spacing: 0.5px;
+}
+
+/* if bookings are there */
+
+.my_bookings_cont .bookings{
+    border-bottom: 2px solid lightgray;
+    width: 100%;
+    height: fit-content;
+    padding: 1.2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px 5px rgba(228, 227, 227, 0.3);
+    /* position: relative; */
+}
+
+.my_bookings_cont .bookings>h1{
+    font-size: 3em;
+    font-weight: 520;
+    text-transform: capitalize;
+    letter-spacing: 0.7px;
+    padding-left: 1rem;
+    cursor: pointer;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop{
+    width: 100%;
+    height: 20em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3%;
+    cursor: pointer;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image{
+    width: 45%;
+    height: 20em;
+    border-radius: 1em;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties{
+    position: relative;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-start;
+    user-select: none;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    text-transform: capitalize;
+    color: rgb(111, 110, 110);
+    
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties p>span{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #ff385c;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>button{
+    /* padding: 0.5rem 0rem; */
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    letter-spacing: 0.5px;
+    color: #fff;
+    /* background: linear-gradient(to right, rgba(79, 51, 176, 0.65), rgba(210,53,165,0.65)); */
+    background-color: rgb(2, 102, 2);
+    cursor: pointer;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>button:hover{
+    box-shadow: 0px 0px 1px rgb(2, 102, 2);
+    opacity: 0.8;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>.rating-btn.hide-rating-btn{
+    display: none;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>.cancel-trip{
+    color: #fff;
+    /* background: linear-gradient(to right, rgba(79, 51, 176, 0.65), rgba(210,53,165,0.65)); */
+
+    background-color: #ce062bc4;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>.cancel-trip:hover{
+    box-shadow: 0px 0px 1px #ce062bc4;
+    opacity: 0.8;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>.cancel-trip.hide-trip-btn{
+    display: none;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>.bookingCancellation-confirmBox{
+    position: absolute;
+    width: 25rem;
+    height: fit-content;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 5px 2px rgba(228, 227, 227, 0.849);
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>.bookingCancellation-confirmBox>h2{
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>.bookingCancellation-confirmBox>.confirmBox-btns{
+    display: grid;
+    gap: 1rem;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>.bookingCancellation-confirmBox>.confirmBox-btns>.ok{
+    padding: 0.4rem 0rem;
+    background-color: #d5062c;
+    border: none;
+    outline: none;
+    border-radius: 0.25rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>.bookingCancellation-confirmBox>.confirmBox-btns>.no{
+    padding: 0.4rem 0rem;
+    background-color: rgb(2, 102, 2);
+    border: none;
+    outline: none;
+    border-radius: 0.25rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>.bookingCancellation-confirmBox>.confirmBox-btns button:hover{
+    opacity: 0.8    ;
+    cursor: pointer;
+}
+
+.my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>.bookingCancellation-confirmBox.hide-confirm-box{
+    display: none;
+}
+
+.my_bookings_cont .bookings .alert{
+    width: 80%;
+    border-top: 2px solid rgb(212, 211, 211);
+    margin: 0rem auto;
+    padding: 0.5rem;
+}
+
+.my_bookings_cont .bookings .alert>h2{
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    margin-bottom: 0.5rem;
+    user-select: none;
+    color: rgb(59, 107, 252);
+}
+
+.my_bookings_cont .bookings .alert>p{
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    color: gray;
+    font-weight: bold;
+}
+
+/* rating section */
+
+.rating-wrapper{
+    background: rgba(255, 255, 255, 0.850);
+    /* background: rgba(0, 0, 0, 0.5) ; */
+    position: fixed;
+    width: 100% !important;
+    height: 100vh !important;
+    z-index: 1 !important;
+    display: grid;
+    place-items: center;
+}
+
+.rating-wrapper.hide-rating{
+    display: none;
+}
+
+.rating-wrapper .rate-the-prop{
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 5px 5px rgba(228, 227, 227, 0.7);
+}
+
+
+.rating-wrapper .rate-the-prop>p{
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.rating-wrapper .rate-the-prop .stars{
+    width: 100%;
+    line-height: 2rem;
+}
+
+.rating-wrapper .rate-the-prop .stars>span{
+    margin-right: 1rem;
+    font-size: 3em;
+    cursor: pointer;
+    /* color: gold; */
+}
+
+.rating-wrapper .rate-the-prop input{
+    display: none;
+}
+
+.rating-wrapper .rate-the-prop textarea{
+    text-align: left;
+    width: 80%;
+    border: 2px solid #fd5d7a;
+    padding: 1rem 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    color: #fd5d7a;
+}
+
+.rating-wrapper .rate-the-prop .rate-btns{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.rating-wrapper .rate-the-prop .rate-btns button{
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.rating-wrapper .rate-the-prop .rate-btns button:nth-child(1){
+    background-color: royalblue;
+}
+
+.rating-wrapper .rate-the-prop .rate-btns button:nth-child(2){
+    background-color: green;
+}
+
+.rating-wrapper .rate-the-prop .rate-btns button:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+
+/* ..........................................................FOOTER SECTION STARTS HERE...................................................... */
+
+
+footer{
+    position: sticky;
+    bottom: 0;
+    border-top: 1.2px solid rgb(210, 208, 208);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 4rem;
+    background: #fff;
+    margin-top: auto;
+}
+
+footer .reserve_tab{
+    display: none;
+}
+
+footer .footer_contents{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer .footer_contents>p{
+    font-size: 1.5rem;
+    letter-spacing: 0.7px;
+    color: rgb(152, 152, 152);
+}
+
+footer .footer_contents .terms{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer .footer_contents .terms p{
+    font-size: 1.3rem;
+    letter-spacing: 0.7px;
+    text-transform: capitalize;
+    color: rgb(152, 152, 152);
+}
+
+footer .footer_contents h2:nth-child(1){
+    font-size: 1.5rem;
+}
+
+footer .footer_contents h2>span{
+    font-size: 2rem;
+}
+
+footer .footer_contents h2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.7px;
+}
+
+
+
+@media screen and (max-width: 1000px){
+
+    header nav .nav-menu:nth-child(3)>.profile_div:nth-child(1){
+        display: none;
+    }
+
+    header nav .nav-menu:nth-child(3)>.profile_div:nth-child(2){
+        display: none;
+    }
+
+    body>.properties{
+        width: 100%;
+    }
+
+    .properties .card{
+        width: 32%;
+    }
+
+    .properties .card .property-details p{
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (max-width: 750px){
+    header{
+        width: 100%;
+    }
+
+    header nav{
+        padding: 2rem;
+        gap: 1rem;
+    }
+
+    body>.properties{
+        width: 100%;
+        
+    }
+
+    .properties .card{
+        width: 45%;
+        
+    }
+
+    footer .footer_contents>.terms{
+        display: none;
+    }
+
+    footer .footer_contents h2{
+        display: none;
+    }
+
+    footer .footer_contents h2:nth-child(1){
+        display: block;
+    }
+
+    /* login page css */
+
+    .login-cont .new-cont-for-login>.btn{
+        display: none;
+    }
+
+    .login-cont .new-cont-for-login>form{
+        width: 100%;
+    }
+
+    .my_bookings_cont{
+        width: 100%;
+    }
+
+    .rating-wrapper .rate-the-prop{
+        width: 90%;
+    }
+
+    .my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>.bookingCancellation-confirmBox{
+        left: -70%;
+    }
+
+    .my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties>p{
+        font-size: 1em;
+        text-align: left;
+    }
+
+    .my_bookings_cont .bookings .booked_prop_cont .image_of_prop .image_properties p>span{
+        font-size: 1.2em;
+    }
+}
+
+
+
+
+@media screen and (max-width: 472px){
+    header nav{
+        padding: 0.2rem;
+        gap: 0rem;
+    }
+
+    header nav .nav-menu:nth-child(2){
+        transform: translateX(0rem);
+    }
+
+    header nav .nav-menu:nth-child(3)>.user-menu{
+        font-size: 1.2rem;
+        padding:  2rem 0.5rem;
+    }
+
+    header nav .nav-menu:nth-child(2)>span{
+        font-size: 1.2rem;
+    }
+
+    .properties .card{
+        width: 100%;
+        
+    }
+
+
+    
+
+}

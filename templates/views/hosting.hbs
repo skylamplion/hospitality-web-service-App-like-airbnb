@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/hosting.css">
+</head>
+<body>
+    {{>navbar}}
+    <section class="hosting-cont">
+        <div class="host">
+            <div class="head-design">
+                <h3>host and earn</h3>
+            </div>
+            <form action="/hosting" method="post" enctype="multipart/form-data">
+            {{!-- enctype="multipart/form-data" --}}
+                <div class="hosting-details-cont">
+
+                    <div class="hosting-fields">
+                        
+                        <select class="host-info" name="property_type" id="">
+                            <option value="null" disabled selected>Select your property type</option>
+                            <option value="flat">Flat</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="bunglow">bunglow</option>
+                            <option value="hotel">hotel</option>
+                        </select>                     
+                    </div>
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            home_app_logo
+                        </span>
+
+                        <input type="text" name="property_name" class="host-info" placeholder=" Enter property name"/>                    
+                    </div>
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            badge
+                        </span>
+
+                        <input type="text" name="owner" class="host-info" placeholder="Enter your name"/>                    
+                    </div>
+                    
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            currency_rupee
+                        </span>
+                        <input type="number" name="price" class="host-info" placeholder="Enter price"/>                    
+                    </div>
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            area_chart
+                        </span>
+                        <input type="number" name="area" class="host-info" placeholder="Enter area "/>                    
+                    </div>
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            bedroom_parent
+                        </span>
+                        <input type="number" name="bedrooms" class="host-info" placeholder="Enter bedrooms count"/>                    
+                    </div>
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            king_bed
+                        </span>
+                        <input type="number" name="beds" class="host-info" placeholder="Enter beds count"/>                    
+                    </div>
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            groups
+                        </span>
+                        <input type="number" name="guest_allowed" class="host-info" placeholder="Guest allowed count"/>                    
+                    </div>
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            location_city
+                        </span>
+                        <input type="text" name="city" class="host-info" placeholder="Enter city name"/>
+                        <input type="text" name="state" class="host-info" placeholder="Enter state name"/> 
+                        <input type="text" name="country" class="host-info" placeholder="Enter country name"/>                     
+                    </div>
+                    <div class="hosting-fields">
+                        
+                        <input type="file" name="galleryimages" class="host-info"/> 
+                        <input type="file" name="galleryimages" class="host-info"/>
+                        <input type="file" name="galleryimages" class="host-info"/>
+                        <input type="file" name="galleryimages" class="host-info"/>                   
+                    </div>
+                    
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            description
+                        </span>
+                        <textarea name="textarea" id="" placeholder="Write your property description" cols="50" rows="5"></textarea>                   
+                    </div>
+                </div>
+                <h3>Amenities</h3>
+                <div class="amenities-cont">
+                    
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            local_parking
+                        </span>
+                        <select class="host-info" name="parking" id="">
+                            <option value="null" disabled selected>parking</option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                        </select>                     
+                    </div>
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            wifi
+                        </span>
+                        <select class="host-info" name="wifi" id="">
+                            <option value="null" disabled selected>Wifi</option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                        </select>                     
+                    </div>
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            breakfast_dining
+                        </span>
+                        <select class="host-info" name="breakfast" id="">
+                            <option value="null" disabled selected>breakfast</option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                        </select>                     
+                    </div>
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            ac_unit
+                        </span>
+                        <select class="host-info" name="ac" id="">
+                            <option value="null" disabled selected>AC unit</option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                        </select>                     
+                    </div>
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            dry_cleaning
+                        </span>
+                        <select class="host-info" name="laundry" id="">
+                            <option value="null" disabled selected>laundry</option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                        </select>                     
+                    </div>
+                    <div class="hosting-fields">
+                       <span class="material-symbols-outlined">
+                            kitchen
+                        </span>
+                        <select class="host-info" name="fridge" id="">
+                            <option value="null" disabled selected>fridge</option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                        </select>                     
+                    </div>
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            soup_kitchen
+                        </span>
+                        <select class="host-info" name="kitchen" id="">
+                            <option value="null" disabled selected>kitchen</option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                        </select>                     
+                    </div>
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            detector_smoke
+                        </span>
+                        <select class="host-info" name="smoke_alarm" id="">
+                            <option value="null" disabled selected>smoke detector</option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                        </select>                     
+                    </div>
+                    <div class="hosting-fields">
+                        <span class="material-symbols-outlined">
+                            pets
+                        </span>
+                        <select class="host-info" name="pets_allowed" id="">
+                            <option value="null" disabled selected>pets permitted</option>
+                            <option value="yes">yes</option>
+                            <option value="no">no</option>
+                        </select>                     
+                    </div>
+                </div>
+                <div class="hosting-fields"><button type="submit">Submit</button></div>
+
+            </form>
+        </div>
+    </section>
+    {{>footer}}
+    
+    <script src="./script/hosting.js"></script>
+</body>
+</html>

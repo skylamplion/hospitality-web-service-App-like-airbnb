@@ -1,0 +1,28 @@
+{
+  "name": "airbnb_clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js -e js,hbs"
+  },
+  "author": "Gagan Deep Singh",
+  "license": "ISC",
+
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.0",
+    "cloudinary": "^1.33.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "datauri": "^4.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "hbs": "^4.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.9.1",
+    "mongoose-sequence": "^5.3.1",
+    "multer": "^1.4.5-lts.1"
+  }
+}

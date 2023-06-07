@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/contactus.css">
+</head>
+<body>
+    {{>navbar}}
+    <section class="contact_us_cont">
+        <div class="greet">
+            <span class="material-symbols-outlined">
+                contacts
+            </span>
+            <h1>hello wanderer, how can we help?</h1>
+        </div>
+        <div class="contact_bridge">
+            <div class="form_info">
+                <form method="post">
+                    <div class="contact_input_div">
+                        {{!-- <label for="">name</label> --}}
+                        <input type="text" name="name" placeholder="Your name...">
+                    </div>
+                    <div class="contact_input_div">
+                        {{!-- <label for="">email</label> --}}
+                        <input type="text" name="email" placeholder="Your email...">
+                    </div>
+                    <div class="contact_input_div">
+                        {{!-- <label for="">mobile</label> --}}
+                        <input type="text" name="mobile" placeholder="Your mobile number...">
+                    </div>
+                    <div class="contact_input_div">
+                        {{!-- <label for="">query</label> --}}
+                        <textarea name="query" id="" cols="55" rows="3" placeholder="write your query"></textarea>
+                    </div>
+                    <button type="submit">submit</button>
+                </form>
+            </div>
+            <div class="our_information">
+                <h3>get in touch</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iste est, nemo laboriosam veritatis quis quaerat praesentium inventore autem recusandae. Voluptate hic culpa esse quod, quasi magni nam aut quaerat modi natus nesciunt debitis, voluptates veritatis consequatur id at odio facere eius cum nihil voluptatem quae porro. Nostrum, amet quisquam.</p>
+                <div class="info">
+                    <span class="material-symbols-outlined">
+                        pin_drop
+                    </span>
+                <p>New York, USA</p>
+                </div>
+                <div class="info">
+                    <span class="material-symbols-outlined">
+                        contact_phone
+                    </span>
+                    <p>011 123 4567</p>
+                </div>
+                <div class="info">
+                    <span class="material-symbols-outlined">
+                        mail
+                    </span>
+                    <p>airbnb@email.com</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    {{>footer}}
+    
+    <script src="script/contactus.js"></script>
+</body>
+</html>

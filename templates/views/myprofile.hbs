@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/myprofile.css">
+</head>
+<body>
+    {{>navbar}}
+    <section class="myprofile_cont">
+        <div class="my_image">
+            <h1>Personal info</h1>
+            <div class="my_user_image"></div>
+        </div>
+
+        <div class="update_form_and_extraInfo">
+            <div class="update_form">
+                <form action="/myprofile" method="post">
+                    <div class="myprofile_inputs_cont">
+                        <div class="myprofile_inputs user-select-none">
+                            <label for="">first name</label>
+                            <input class="input" type="text" name="firstname" value="{{firstname}}" autocomplete="off"/>
+                        </div>
+                        <div class="myprofile_btn">
+                            <button type="button" class="edit_button">edit</button>
+                        </div>
+                    </div>
+
+                    <div class="myprofile_inputs_cont">
+                        <div class="myprofile_inputs user-select-none">
+                            <label for="">last name</label>
+                            <input class="input" type="text" name="lastname" value="{{lastname}}" autocomplete="off"/>
+                        </div>
+                        <div class="myprofile_btn">
+                            <button type="button" class="edit_button">edit</button>
+                        </div>
+                    </div>
+
+                    <div class="myprofile_inputs_cont">
+                        <div class="myprofile_inputs user-select-none">
+                            <label for="">email</label>
+                            <input class="input lowercase" type="text" name="email" value="{{email}}" autocomplete="off"/>
+                        </div>
+                        <div class="myprofile_btn">
+                            <button type="button" class="edit_button">edit</button>
+                        </div>
+                    </div>
+
+
+                    <div class="myprofile_inputs_cont">
+                        <div class="myprofile_inputs user-select-none" id="pass_profile">
+                            <label for="">password</label>
+                            <input class="input" id="inp_pass" type="password" name="password" placeholder="*********" required autocomplete="off"/>
+                        </div>
+                        <div class="myprofile_btn">
+                            <button type="button" class="edit_button" id="pass_btn">edit</button>
+                        </div>
+                    </div>
+
+                    <div class="myprofile_inputs_cont">
+                        <div class="myprofile_inputs user-select-none">
+                            <label for="">contact</label>
+                            <input class="input" type="text" name="contact" value="{{contact}}" autocomplete="off"/>
+                        </div>
+                        <div class="myprofile_btn">
+                            <button type="button" class="edit_button">edit</button>
+                        </div>
+                    </div>
+                    <button type="submit" id="updateuser_info">Update</button>
+                </form>
+
+                <form action="/deleteuser" method="get" class="delete_acc">
+                    <button id="delete_acc" type="button">Delete account?</button>
+
+                    <div class="confirm_box hide_me">
+                        <h2>Are you sure you want to delete your account?</h2>
+
+                        <div class="my-btns">
+                            <button id="delete-user" type="submit">Delete</button>
+                            <button id="cancel" type="button">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="extra_info_by_bnb">
+                <div class="extra_infos">
+                    <span class="material-symbols-outlined">
+                        hide_source
+                    </span>
+                    <h2>Why isn't my info shown here?</h2>
+                    <p>We're hiding some account details to protect your identity.</p>
+                </div>
+                <div class="extra_infos">
+                    <span class="material-symbols-outlined">
+                        lock
+                    </span>
+                    <h2>which details can be edited?</h2>
+                    <p>Details Airbnb uses to verify your identity can't be changed. Contact info and some personal details can be edited, but we may ask you to verify your identity the next time you book or create a listing.</p>
+                </div>
+                <div class="extra_infos">
+                    <span class="material-symbols-outlined">
+                        visibility
+                    </span>
+                    <h2>What info is shared with others?</h2>
+                    <p>Airbnb only releases contact information for Hosts and guests after a reservation is confirmed.</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    {{>footer}}
+    <script src="script/myprofile.js"></script>
+</body>
+</html>

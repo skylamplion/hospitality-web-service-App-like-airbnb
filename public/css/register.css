@@ -1,0 +1,532 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400&family=Noto+Sans+Mono&display=swap');
+ 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Noto Sans Mono', monospace;
+    font-family: 'Bitter', serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*............................................. HEADER NAV BAR............................................. */
+header{
+    width: 100vw;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: fit-content;
+}
+
+header nav{
+    width: 100%;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 4rem;
+    height: 7rem;
+    box-shadow: 0px 0px 5px 2px rgba(228, 227, 227, 0.849);
+}
+
+header nav .nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+header nav .nav-menu:nth-child(1){
+    gap: 0rem;
+
+}
+
+header nav .nav-menu:nth-child(2){
+    padding: 2rem;
+    transform: translateX(5rem);
+    display: none;
+}
+
+
+
+header nav .nav-menu a{
+    text-decoration: none;
+    font-size: 2rem;
+    transform: translateX(-0.5rem);
+    letter-spacing: 0.05rem;
+} 
+
+header nav .nav-menu a h3{
+    color: #ff385c;
+    font-size: 2rem;
+    /* font-family: 'Noto Sans Mono', monospace; */
+    pointer-events: none;
+}
+
+header nav .box{
+    width: max-content;
+    height: 2rem;
+    border-radius: 3rem;
+    padding: 1.3rem 1rem;
+    gap: 1rem;
+    box-shadow: 0px 0px 5px 5px rgba(228, 227, 227, 0.849);
+}
+
+header nav .box .search_menu{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-right: 0.4rem;
+}
+
+header nav .box .search-icon{
+    line-height: 100%;
+    padding: 0.7rem;
+    border-radius: 50%;
+    background-color: #ff385c;
+    color: white;
+    cursor: pointer;
+}
+
+header nav .nav-menu .profile_div a{
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+header nav .nav-menu .profile_div a:hover{
+    color: #ff385c;
+}
+
+header nav .nav-menu .profile_div>i{
+    font-size: 1.5rem;
+}
+
+header nav .nav-menu .user-menu{
+    padding: 2rem 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+header nav .nav-menu .list{
+    
+    position: absolute;
+    box-shadow: 0px 0px 5px 5px rgba(228, 227, 227, 0.849);
+    width: 20em;
+    z-index: 11;
+    top: 6.2rem;
+    right: 4rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    display: none;
+}
+
+header nav .nav-menu .list--show{
+    display: block;
+    user-select: none;
+}
+
+header nav .nav-menu .list .logIn-signUp{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 0.5px solid lightgray;
+    padding: 1rem 0rem;
+    gap: 1rem;
+}
+
+header nav .nav-menu .list .logIn-signUp p{
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+header nav .nav-menu .list .logIn-signUp p:hover{
+    transform: scale(1.1);
+}
+
+header nav .nav-menu .list .extra-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 0rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+header nav .nav-menu .list .extra-list a>p{
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+header nav .nav-menu .list .extra-list p:hover{
+    transform: scale(1.1);
+}
+
+.margin{
+    margin-left: 1rem;
+}
+
+.border-right{
+    border-right: 2px solid grey;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .nav-menu .profile_div{
+    font-size: 1rem;
+}
+
+/* header nav .nav-menu .user-menu>.profile_div.image_display{
+    background: red;
+    width: 3rem;
+    height: 3rem;
+    
+} */
+
+header nav .nav-menu .user-menu div:nth-child(2){
+    width: 3rem;
+    height: 3rem;
+    /* margin-left: 1rem; */
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    transform: translateX(0.5rem);
+    background-size: cover;
+    background-position: center;
+}
+
+.grey{
+    color: grey;
+}
+
+/* //SECTION:: */
+header section{
+    width: 100vw;
+    border-top: none;
+    border-bottom: 3px solid rgb(236, 235, 235, 0.3);
+    /* box-shadow: 0px 2px 5px 5px rgba(228, 227, 227, 0.849); */
+    height: 5.5rem;
+    padding: 2rem 3rem;
+} 
+
+header .section--hide{
+    display: none;
+}
+
+header section .category_selection{
+    margin-top: 1rem;
+    gap: 2.5rem;
+    text-align: center;
+    z-index: -1;
+}
+
+header section .category_selection i{
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgb(84, 84, 84);
+}
+
+header section .category_selection p{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: rgb(84, 84, 84);
+}
+
+
+header section .filter i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: rgb(84, 84, 84);
+}
+
+header section .filter p{
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(84, 84, 84);
+}
+
+
+/*.................................. registration section starts here...................................... */
+
+body>.registration-cont{
+    width: 80%;
+    height: fit-content;
+    /* height: 100%; */
+    margin: 2rem auto;
+    padding: 1rem;
+    box-shadow: 0px 0px 5px 5px lightgray;
+    border-radius: 1rem;
+    background: linear-gradient(to bottom right, rgba(79, 51, 176, 0.6), rgba(210,53,165,0.9));   
+}
+
+.registration-cont h2{
+    font-size: 3.5em;
+    letter-spacing: 1.5px;
+    word-spacing: 5px;
+    color: rgba(47, 79, 79, 0.833);
+    user-select: none;
+    color: #fff;
+    /* margin-bottom: 5rem; */
+}
+
+.registration-cont form{
+    width: 100%;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.mt-5{
+    margin-top: 1rem;
+}
+
+.registration-cont form div{
+    width: 45%;
+    height: 5rem;
+    display: grid;
+    /* min-height: 3rem; */
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    margin: auto;
+    background-color: #fff;
+}
+
+.registration-cont form div .user-info{
+    width: 100%;
+    height:fit-content;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    color: #ff385c;
+}
+
+.registration-cont form div .user-info:last-child{
+    border-radius: 0rem;
+}
+
+.registration-cont form div label{
+    width: 100%;
+    font-size: 1.7em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: rgba(47, 79, 79, 0.833);
+    border-radius: 1rem;
+    user-select: none;
+}
+
+.registration-cont form div .user-info select{
+    width: 20rem;
+    height: 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+}
+
+.registration-cont form div:nth-child(5){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.registration-cont form div:last-child {
+    background: transparent;
+    border:2px solid #fff;
+}
+
+.registration-cont form div:last-child:hover{
+    opacity: 0.8;
+}
+
+.registration-cont form div:last-child button{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.registration-cont form div:last-child button:hover{
+    cursor: pointer;
+    border-radius: 1rem;
+    background: linear-gradient(to right,
+    rgba(210,53,165,0.9), rgba(79, 51, 176, 0.6) )
+}
+
+.registration-cont form div .user-info option{
+    width: 100%;
+    height: 1.5rem;
+    border: none;
+    outline: none;
+}
+
+.registration-cont form div button{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* ..........................................................FOOTER SECTION STARTS HERE...................................................... */
+
+
+footer{
+    position: sticky;
+    bottom: 0;
+    border-top: 1.2px solid rgb(210, 208, 208);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 4rem;
+    background: #fff;
+    margin-top: auto;
+}
+
+footer .reserve_tab{
+    display: none;
+}
+
+footer .footer_contents{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer .footer_contents>p{
+    font-size: 1.5rem;
+    letter-spacing: 0.7px;
+    color: rgb(152, 152, 152);
+}
+
+footer .footer_contents .terms{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer .footer_contents .terms p{
+    font-size: 1.3rem;
+    letter-spacing: 0.7px;
+    text-transform: capitalize;
+    color: rgb(152, 152, 152);
+}
+
+footer .footer_contents h2:nth-child(1){
+    font-size: 1.5rem;
+}
+
+footer .footer_contents h2>span{
+    font-size: 2rem;
+}
+
+footer .footer_contents h2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.7px;
+}
+
+
+@media screen and (max-width:750px){
+    .registration-cont form{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .registration-cont form > div{
+        width: 100%;
+    }
+
+    footer .footer_contents>.terms{
+        display: none;
+    }
+
+    footer .footer_contents h2{
+        display: none;
+    }
+
+    footer .footer_contents h2:nth-child(1){
+        display: block;
+    }
+
+    header{
+        width: 100%;
+    }
+
+    header nav{
+        padding: 1rem;
+        gap: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 572px){
+    header nav{
+        padding: 0.2rem;
+        gap: 0rem;
+    }
+
+    header nav .nav-menu:nth-child(2){
+        transform: translateX(0rem);
+    }
+
+    header nav .nav-menu:nth-child(3)>.user-menu{
+        font-size: 1.2rem;
+        padding:  2rem 0.5rem;
+    }
+
+    header nav .nav-menu:nth-child(2)>span{
+        font-size: 1.2rem;
+    }
+
+    body>.registration-cont{
+        width: 90%;
+    }
+    
+}

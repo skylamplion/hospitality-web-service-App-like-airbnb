@@ -1,0 +1,1095 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400&family=Noto+Sans+Mono&display=swap');
+ 
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Noto Sans Mono', monospace;
+    font-family: 'Bitter', serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/*............................................. HEADER NAV BAR............................................. */
+header{
+    width: 100%;
+    background-color: #fff;
+    position: static;
+    top: 0;
+    z-index: 1;
+    height: fit-content;
+}
+
+header nav{
+    width: 100%;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 4rem;
+    height: 7rem;
+    box-shadow: 0px 0px 5px 2px rgba(228, 227, 227, 0.849);
+}
+
+header nav .nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+header nav .nav-menu:nth-child(1){
+    gap: 0rem;
+
+}
+
+header nav .nav-menu:nth-child(2){
+    padding: 2rem;
+    transform: translateX(5rem);
+    display: none;
+}
+
+
+
+header nav .nav-menu a{
+    text-decoration: none;
+    font-size: 2rem;
+    transform: translateX(-0.5rem);
+    letter-spacing: 0.05rem;
+} 
+
+header nav .nav-menu a h3{
+    color: #ff385c;
+    font-size: 2rem;
+    /* font-family: 'Noto Sans Mono', monospace; */
+    pointer-events: none;
+}
+
+header nav .box{
+    width: max-content;
+    height: 2rem;
+    border-radius: 3rem;
+    padding: 1.3rem 1rem;
+    gap: 1rem;
+    box-shadow: 0px 0px 5px 5px rgba(228, 227, 227, 0.849);
+}
+
+header nav .box .search_menu{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-right: 0.4rem;
+}
+
+header nav .box .search-icon{
+    line-height: 100%;
+    padding: 0.7rem;
+    border-radius: 50%;
+    background-color: #ff385c;
+    color: white;
+    cursor: pointer;
+}
+
+header nav .nav-menu .profile_div a{
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+header nav .nav-menu .profile_div a:hover{
+    color: #ff385c;
+}
+
+header nav .nav-menu .profile_div>i{
+    font-size: 1.5rem;
+}
+
+header nav .nav-menu .user-menu{
+    padding: 2rem 1rem;
+    position: relative;
+    cursor: pointer;
+}
+
+header nav .nav-menu .list{
+    
+    position: absolute;
+    box-shadow: 0px 0px 5px 5px rgba(228, 227, 227, 0.849);
+    width: 20em;
+    z-index: 11;
+    top: 6.2rem;
+    right: 4rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    display: none;
+}
+
+header nav .nav-menu .list--show{
+    display: block;
+    user-select: none;
+}
+
+header nav .nav-menu .list .logIn-signUp{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-bottom: 0.5px solid lightgray;
+    padding: 1rem 0rem;
+    gap: 1rem;
+}
+
+header nav .nav-menu .list .logIn-signUp p{
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+header nav .nav-menu .list .logIn-signUp p:hover{
+    transform: scale(1.1);
+}
+
+header nav .nav-menu .list .extra-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em 0rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+header nav .nav-menu .list .extra-list a>p{
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+header nav .nav-menu .list .extra-list p:hover{
+    transform: scale(1.1);
+}
+
+.margin{
+    margin-left: 1rem;
+}
+
+.border-right{
+    border-right: 2px solid grey;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .nav-menu .profile_div{
+    font-size: 1rem;
+}
+
+/* header nav .nav-menu .user-menu>.profile_div.image_display{
+    background: red;
+    width: 3rem;
+    height: 3rem;
+    
+} */
+
+header nav .nav-menu .user-menu div:nth-child(2){
+    width: 3rem;
+    height: 3rem;
+    /* margin-left: 1rem; */
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    transform: translateX(0.5rem);
+    background-size: cover;
+    background-position: center;
+}
+
+.grey{
+    color: grey;
+}
+
+/* //SECTION:: */
+header section{
+    width: 100%;
+    border-top: none;
+    border-bottom: 3px solid rgb(236, 235, 235, 0.3);
+    /* box-shadow: 0px 2px 5px 5px rgba(228, 227, 227, 0.849); */
+    height: 5.5rem;
+    padding: 2rem 3rem;
+} 
+
+header .section--hide{
+    display: none;
+}
+
+header section .category_selection{
+    margin-top: 1rem;
+    gap: 2.5rem;
+    text-align: center;
+    z-index: -1;
+}
+
+header section .category_selection i{
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgb(84, 84, 84);
+}
+
+header section .category_selection p{
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: rgb(84, 84, 84);
+}
+
+
+header section .filter i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: rgb(84, 84, 84);
+}
+
+header section .filter p{
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(84, 84, 84);
+}
+
+/* air information for wishlist */
+.air-information{
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: #ff385c;
+    position: absolute;
+    top: 0;
+    right: -3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+}
+
+.air-information>.no_of_info{
+    font-weight: bold;
+    font-size: 1em;
+}
+
+
+/* .........................................BOOKING PAGE DESIGN STARTS HERE.................................. */
+
+.hotel-info{
+    width: 80%;
+    margin: 2rem auto;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.hotel-info .hotel-info-cont{
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 0rem;
+}
+
+.hotel-info .hotel-info-cont:nth-child(1){
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.hotel-info .hotel-info-cont:nth-child(1) h1{
+    font-size: 3em;
+    letter-spacing: 1.5px;
+    color: darkslategray;
+    text-transform: capitalize;
+}
+
+.hotel-info .hotel-info-cont:nth-child(1)>p{
+    font-size: 2em;
+    letter-spacing: 0.5px;
+    color: rgb(142, 142, 142);
+    text-transform: capitalize;
+}
+
+.hotel-info .hotel-info-cont:nth-child(1) .prop_image_cont{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    width: 100%;
+    height: fit-content;
+}
+
+.hotel-info .hotel-info-cont:nth-child(1) .prop_image_cont .property_images{
+    width: 48%;
+    height: 20em;
+    background-color: aquamarine;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+/* .hotel-info .hotel-info-cont:nth-child(1) h2{
+    color: darkslategray;
+    font-size: 5em;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+}
+
+.hotel-info .hotel-info-cont:nth-child(1) .prop_room_details span{
+    color: rgb(142, 142, 142);
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    margin-right: 0.7rem;
+}
+
+.hotel-info .hotel-info-cont:nth-child(1) .property_owner_image{
+    border: 1px solid black;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+} */
+
+.hotel-info .hotel-info-cont:nth-child(2){
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid lightgray;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .new_info_div{
+    width: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+    border-bottom: 2px solid lightgray;
+    padding-bottom: 2rem;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .new_info_div .new{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    margin-bottom: 2rem;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .new_info_div .new>h2{
+    color: darkslategray;
+    font-size: 3em;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .new_info_div .new .prop_room_details>span{
+    color: rgb(142, 142, 142);
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-right: 0.7rem;
+    text-transform: capitalize;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .new_info_div .property_owner_image{
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2)>h2{
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: darkslategray;
+    letter-spacing: 1px;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .amenities{
+    width: 57%;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid lightgray;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0rem;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .amenities .amenities_available{
+    width: 50%;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem 0rem;
+    margin-bottom: 3rem;
+    /* margin-bottom: 2rem; */
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .amenities .amenities_available span:nth-child(1){
+    font-size: 4em;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .amenities .amenities_available span:nth-child(2){
+    font-size: 2.5em;
+    color: #ff385c;
+    align-self: flex-end;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div{
+    width: 40%;
+    position: sticky;
+    bottom: 4.5rem;
+    left: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px 5px lightgray;
+    background: #fff;
+}
+
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div.unhide-booking-div{
+    display: block;
+}
+
+
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div>h1{
+    font-size: 3rem;
+    letter-spacing: 1px;
+    color: darkslategray;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .first_cont{
+    width: 100%;
+    height: fit-content;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .first_cont .check_in_check_out{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .first_cont .check_in_check_out .check_in{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid gray;
+    padding: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .first_cont .check_in_check_out .check_out{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid gray;
+    border-left: none;
+    padding: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .first_cont .check_in_check_out .check_out label{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: darkslategray;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .first_cont .check_in_check_out .check_in label{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: darkslategray;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .first_cont .guest_count{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid gray;
+    padding: 1rem;
+    border-top: none;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    user-select: none;
+    pointer-events: none;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .first_cont .guest_count label{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: darkslategray;
+}
+
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .first_cont .guest_count input{
+    border: none;
+    outline: none;
+    line-height: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    user-select: none;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .first_cont .guest_count input::placeholder{
+    color: #ff385da0;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div h3{
+    font-size: 2rem;
+    transform: translateY(1rem);
+    letter-spacing: 1px;
+    text-transform: capitalize;    
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .second_cont{
+    border: 2px solid gray;
+    border-radius: 1rem;
+    width: 100%;
+    margin-top: -0.8rem;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .second_cont .pricing_details{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: gray;
+    user-select: none;
+    pointer-events: none;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .second_cont .pricing_details input{
+    border: none;
+    font-size: 2.2rem;
+    width: 50%;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ff385dad;
+    text-transform: capitalize;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .second_cont .prop_id_maintainer{
+    user-select: none;
+    pointer-events: none;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .second_cont .prop_id_maintainer.hide_it{
+    display:none;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .second_cont select{
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    text-transform: capitalize;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div .second_cont select:hover{
+    cursor: pointer;
+    background-color: #e6e6e6;
+    background-color: #ff4f705b;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div button{
+    width: 100%;
+    padding: 1.4rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: rgb(211, 3, 3); 
+    color: #fff;   
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div button:hover{
+    background: rgb(175, 3, 3); 
+    cursor: pointer;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .wrapper{
+    width: 57%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .wrapper h2{
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    color: darkslategray;
+    letter-spacing: 1px;
+    user-select: none;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .wrapper p{
+    font-size: 1.5rem;
+    text-align: justify;
+    letter-spacing: 0.7px;
+    color: gray;
+    line-height: 2rem;
+    user-select: none;
+}
+
+.hotel-info .hotel-info-cont:nth-child(2) .booking_div p{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    color: gray;
+}
+
+.hotel-info .hotel-info-cont:nth-child(3){
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.hotel-info .hotel-info-cont:nth-child(3) .review_info{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hotel-info .hotel-info-cont:nth-child(3) .review_info span{
+    font-size: 2rem;
+}
+
+.hotel-info .hotel-info-cont:nth-child(3) .review_info span>span{
+    font-size: 2rem;
+    color: gold;
+}
+
+.hotel-info .hotel-info-cont:nth-child(3) .rating_description{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.5rem 1rem;
+    border: 2px solid rgb(234, 234, 234);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.hotel-info .hotel-info-cont:nth-child(3) .rating_description .reviewer_details{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hotel-info .hotel-info-cont:nth-child(3) .rating_description .reviewer_details>.reviewer_images{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.hotel-info .hotel-info-cont:nth-child(3) .rating_description .reviewer_details .reviewer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+}
+
+.hotel-info .hotel-info-cont:nth-child(3) .rating_description .reviewer_details .reviewer .reviewer_names{
+    font-size: 1.7rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+.hotel-info .hotel-info-cont:nth-child(3) .rating_description .reviewer_details .reviewer .review_dates{
+    font-size: 1.2em;
+    color: gray;
+    font-size: 0.8rem;
+    letter-spacing: 0.4px;
+}
+
+.hotel-info .hotel-info-cont:nth-child(3) .rating_description>.reviews{
+    width: 100%;
+    height: fit-content;
+    padding: 1rem 0rem;
+    color: gray;
+    text-align: justify;
+    letter-spacing: 0.8px;
+    word-spacing: 2px;
+    line-height: 2rem;
+    user-select: none;
+    font-size: 1.5rem;
+}
+
+
+
+/* ..........................................................FOOTER SECTION STARTS HERE...................................................... */
+
+
+footer{
+    position: sticky;
+    bottom: 0;
+    border-top: 1.2px solid rgb(210, 208, 208);
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background: #fff;
+    margin-top: auto;
+}
+
+footer .footer_contents{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer .footer_contents>p{
+    font-size: 1.5rem;
+    letter-spacing: 0.7px;
+    color: rgb(152, 152, 152);
+}
+
+footer .footer_contents .terms{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer .footer_contents .terms p{
+    font-size: 1.3rem;
+    letter-spacing: 0.7px;
+    text-transform: capitalize;
+    color: rgb(152, 152, 152);
+}
+
+/* hidden reserve button */
+
+footer>.reserve_tab{
+    width: 10rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border: none;
+    outline: none;
+    background: rgb(211, 3, 3); 
+    border-radius: 0.2em;
+    display: none;
+}
+
+footer>.reserve_tab:hover{
+    cursor: pointer;
+    background: rgb(175, 3, 3); 
+}
+
+footer .footer_contents h2:nth-child(1){
+    font-size: 1.5rem;
+}
+
+footer .footer_contents h2>span{
+    font-size: 2rem;
+}
+
+footer .footer_contents h2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.7px;
+}
+
+
+
+@media screen and (max-width: 900px){
+
+    header nav .nav-menu:nth-child(3)>.profile_div:nth-child(1){
+        display: none;
+    }
+
+    header nav .nav-menu:nth-child(3)>.profile_div:nth-child(2){
+        display: none;
+    }
+
+    body>.properties{
+        width: 100%;
+    }
+
+    .properties .card{
+        width: 32%;
+    }
+
+    .properties .card .property-details p{
+        font-size: 1.2rem;
+    }
+
+    footer .footer_contents>.terms{
+        display: none;
+    }
+
+    footer .footer_contents h2{
+        display: none;
+    }
+
+    footer .footer_contents h2:nth-child(1){
+        display: block;
+    }
+
+    .hotel-info{
+        width: 100%;    
+    }
+
+    .hotel-info .hotel-info-cont:nth-child(1) .prop_image_cont .property_images{
+        width: 45%;
+        height: 20em;
+    }
+}
+
+
+@media screen and (max-width: 750px){
+    header{
+        width: 100%;
+    }
+
+    header nav{
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    body>.properties{
+        width: 100%;
+        
+    }
+
+    .properties .card{
+        width: 45%;
+        
+    }
+
+    footer .footer_contents>.terms{
+        display: none;
+    }
+
+    footer .footer_contents h2{
+        display: none;
+    }
+
+    footer .footer_contents h2:nth-child(1){
+        display: block;
+    }
+
+    /* login page css */
+
+    .login-cont .new-cont-for-login>.btn{
+        display: none;
+    }
+
+    .login-cont .new-cont-for-login>form{
+        width: 100%;
+    }
+
+    .hotel-info{
+        width: 100%;    
+        padding-left: 1rem;
+    }
+
+    .hotel-info .hotel-info-cont:nth-child(1) .prop_image_cont .property_images{
+        width: 45%;
+        height: 20em;
+    }
+
+    .hotel-info .hotel-info-cont:nth-child(2) .new_info_div .new{
+        width: 100%;
+    }
+
+    .hotel-info .hotel-info-cont:nth-child(2) .amenities{
+        width: 100%;
+    }
+
+    .hotel-info .hotel-info-cont:nth-child(2) .amenities .amenities_available span:nth-child(1){
+        font-size: 3.5em;
+    }
+
+    .hotel-info .hotel-info-cont:nth-child(2) .amenities .amenities_available span:nth-child(2){
+        font-size: 2em;
+    }
+
+    .hotel-info .hotel-info-cont:nth-child(2) .booking_div{
+        width: 80%;
+        height: fit-content;
+        position: fixed;
+        left: 0%;
+        /* display: none; */
+    }
+
+    .hotel-info .hotel-info-cont:nth-child(3){
+        width: 100%;
+    }
+
+    .hotel-info .hotel-info-cont:nth-child(2) .booking_div{
+        width: 60%;
+        height: fit-content;
+        z-index: 1100;
+        display: none;
+        bottom: 4.5rem;
+        gap: 2rem;
+        box-shadow: 0px 0px 5px 2px lightgray;
+    }
+
+    footer{
+        padding: 0rem 2rem;
+    }
+
+    footer .reserve_tab{
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 572px){
+    .hotel-info{
+        width: 100%;    
+    }
+
+    .hotel-info .hotel-info-cont:nth-child(1) h1{
+        font-size: 2.5em;
+        letter-spacing: 1px;
+    }
+
+    .hotel-info .hotel-info-cont:nth-child(1)>p{
+        font-size: 1.5em;
+        letter-spacing: 0.5px;
+    }
+
+    .hotel-info .hotel-info-cont:nth-child(1) .prop_image_cont .property_images{
+        width: 90%;
+        height: 20em;
+    }
+
+    footer .footer_contents:nth-child(1){
+        display: none;
+    }
+
+    .hotel-info .hotel-info-cont:nth-child(2) .booking_div{
+        width: 80%;
+        z-index: 1000;
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 472px){
+    header nav{
+        padding: 0.2rem;
+        gap: 0rem;
+    }
+
+    header nav .nav-menu:nth-child(2){
+        transform: translateX(0rem);
+    }
+
+    header nav .nav-menu:nth-child(3)>.user-menu{
+        font-size: 1.2rem;
+        padding:  2rem 0.5rem;
+    }
+
+    header nav .nav-menu:nth-child(2)>span{
+        font-size: 1.2rem;
+    }
+
+    .properties .card{
+        width: 100%;
+        
+    }
+
+    .hotel-info .hotel-info-cont:nth-child(2) .booking_div{
+        width: 85%;
+        z-index: 1000;
+    }
+    
+
+}
